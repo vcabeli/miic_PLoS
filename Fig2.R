@@ -1,6 +1,6 @@
 library(MASS)
 library(copula)
-library(distR)
+library(distr)
 library(miic)
 
 # The proposed information-maximizing discretization scheme is illustrated for a joint distribution
