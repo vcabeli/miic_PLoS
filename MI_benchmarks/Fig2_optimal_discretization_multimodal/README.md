@@ -1,13 +1,21 @@
 Fig2 Optimum bivariate discretization for mutual information estimation
 ================
-Vincent CABELI
 
 The proposed information-maximizing discretization scheme is illustrated
 for a joint distribution defined as a Gumbel bivariate copula with
-parameter \(\theta = 5\) and marginal distributions chosen as Gaussian
-mixtures with three equiprobable peaks and respective means and
-variances, \(\mu_X = \{0,4,6\}\), \(\sigma_X = \{1,2,0.7\}\) and
-\(\mu_Y = \{−3,6,9\}\) , \(\sigma_Y = \{2,0.5,0.5\}\).
+parameter ![\\theta
+= 5](https://latex.codecogs.com/png.latex?%5Ctheta%20%3D%205
+"\\theta = 5") and marginal distributions chosen as Gaussian mixtures
+with three equiprobable peaks and respective means and variances,
+![\\mu\_X =
+\\{0,4,6\\}](https://latex.codecogs.com/png.latex?%5Cmu_X%20%3D%20%5C%7B0%2C4%2C6%5C%7D
+"\\mu_X = \\{0,4,6\\}"), ![\\sigma\_X =
+\\{1,2,0.7\\}](https://latex.codecogs.com/png.latex?%5Csigma_X%20%3D%20%5C%7B1%2C2%2C0.7%5C%7D
+"\\sigma_X = \\{1,2,0.7\\}") and ![\\mu\_Y =
+\\{-3,6,9\\}](https://latex.codecogs.com/png.latex?%5Cmu_Y%20%3D%20%5C%7B-3%2C6%2C9%5C%7D
+"\\mu_Y = \\{-3,6,9\\}") , ![\\sigma\_Y =
+\\{2,0.5,0.5\\}](https://latex.codecogs.com/png.latex?%5Csigma_Y%20%3D%20%5C%7B2%2C0.5%2C0.5%5C%7D
+"\\sigma_Y = \\{2,0.5,0.5\\}").
 
 ``` r
 library(MASS)
@@ -45,4 +53,4 @@ print(discretizeMutual(data[,1], data[,2])$info)
 
 ![](Fig2_files/figure-gfm/plot-1.png)<!-- -->
 
-    ## [1] 1.02574
+    ## [1] 1.19598

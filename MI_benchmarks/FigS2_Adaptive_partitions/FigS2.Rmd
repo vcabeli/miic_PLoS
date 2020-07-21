@@ -1,6 +1,8 @@
 ---
 title: "FigS2 Adaptive information-maximizing partitions depending on interaction strength"
-output: github_document
+output:
+  github_document:
+    pandoc_args: --webtex
 bibliography: 
   - "../../PLoS_SI_Supp.bib"
 ---
@@ -11,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 To assess the range in bin numbers depending on the strength of interaction between variables, we generated N = 1,000 independent samples for 10,000 Gaussian bivariate distributions with a uniformly distributed correlation coefficient ρ in [−1, 1].
-The real mutual information (RI) of Gaussian bivariate distributions can be computed directly as $RI(X; Y ) = − log(1 − \rho^2 )/2$ [@cover_elements_2012]. For each pair (X, Y ), we estimated the mutual information with the proposed optimum bivariate discretization as well as the Maximal Information Coefficient [@reshef_detecting_2011] using the `minepy` package. We counted the number of bins on each dimension for the optimal discretization found by both methods.
+The real mutual information (RI) of Gaussian bivariate distributions can be computed directly as $RI(X; Y ) = - log(1 - \rho^2 )/2$ [@cover_elements_2012]. For each pair (X, Y ), we estimated the mutual information with the proposed optimum bivariate discretization as well as the Maximal Information Coefficient [@reshef_detecting_2011] using the `minepy` package. We counted the number of bins on each dimension for the optimal discretization found by both methods.
 
 
 To run this script you will need a working python installation with the [minepy package](https://minepy.readthedocs.io/en/latest/) [@albanese_minerva_2013].
@@ -70,7 +72,7 @@ for(i in 1:nreps){
 We can now plot the number of bins found on X and Y by the optimal discretization on our normal bivariate distributions. Since the marginals are the same and the joint distribution is symmetrical, we expect roughly the same number of bins on X and Y. For the `miic` discretization, we also expect more bins for stronger correlations and less for weaker correlations. 
 
 ### miic results
-```{r plot miic}
+```{r plot miic, fig.width = 6, fig.height = 6}
 miic_res_nbins %>%
   group_by(ncutsx, ncutsy) %>%
   summarise(avgrho = mean(abs(rho)), avgRI = mean(-log(1-rho**2)/2), count = n()) %>%
@@ -91,7 +93,7 @@ miic_res_nbins %>%
 The information-maximizing partition proposed in the present paper behaves as expected: the number of bins on each variable is roughly similar and scales monotonically with the strength of the interaction between variables. This implies that additional bins are only introduced when their associated complexity cost is justified by a larger gain in mutual information. Conversely, when the information between X and Y approaches zero, both variables are partitioned into fewer and fewer bins until a single bin is selected for each variable, when they are inferred to be independent, given the available data.
 
 ### MINE results
-```{r plot mine}
+```{r plot mine, fig.width = 6, fig.height = 6}
 mine_res_nbins %>%
   group_by(ncutsx, ncutsy) %>%
   summarise(avgrho = mean(abs(rho)), avgRI = mean(-log(1-rho**2)/2), count = n()) %>%
@@ -108,6 +110,8 @@ mine_res_nbins %>%
     xlab("# bins on X")
 ```
 
-The partition chosen to estimate the Maximal Information Coefficient [@reshef_detecting_2011] is very different, regardless of the interaction strength, as it systematically corresponds to an unbalanced distribution of bins between the two variables, with one variable usually partitioned into the maximum number of bins (set by default to $\text{floor}(N^{0.6} /2) = 31$) while the other is discretized into two levels only. This result is not unexpected, however, as the Maximal Information Coefficient is defined by maximizing the mutual information of the discretized variables over the grid, $I([X]_{∆x} ; [Y]_{∆y})$, normalized by the minimum of $\text{log} ∆_x$ and $\text{log} ∆_y$. Indeed, maximizing the normalized mutual information is done by partitioning as few samples as possible into the maximum number of bins in one dimension (as sketched in Fig. 1), while simultaneously minimizing the number of bins, and thus $\text{log}∆_i$ , in the other dimension. See further discussion in [@kinney_equitability_2014].
+The partition chosen to estimate the Maximal Information Coefficient [@reshef_detecting_2011] is very different, regardless of the interaction strength, as it systematically corresponds to an unbalanced distribution of bins between the two variables, with one variable usually partitioned into the maximum number of bins (set by default to $\text{floor}(N^{0.6}/2) = 31$) while the other is discretized into two levels only.
+This result is not unexpected, however, as the Maximal Information Coefficient is defined by maximizing the mutual information of the discretized variables over the grid, $I([X]_{\Delta_x};[Y]_{\Delta_y})$, normalized by the minimum of $\text{log} \Delta_x$ and $\text{log} \Delta_y$.
+Indeed, maximizing the normalized mutual information is done by partitioning as few samples as possible into the maximum number of bins in one dimension (as sketched in Fig. 1), while simultaneously minimizing the number of bins, and thus $\text{log}\Delta_i$ , in the other dimension. See further discussion in [@kinney_equitability_2014].
 
 # References

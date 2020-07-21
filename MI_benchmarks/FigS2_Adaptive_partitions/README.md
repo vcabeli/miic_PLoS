@@ -7,12 +7,14 @@ interaction between variables, we generated N = 1,000 independent
 samples for 10,000 Gaussian bivariate distributions with a uniformly
 distributed correlation coefficient ρ in \[−1, 1\]. The real mutual
 information (RI) of Gaussian bivariate distributions can be computed
-directly as \(RI(X; Y ) = − log(1 − \rho^2 )/2\) (Cover and Thomas
-2012). For each pair (X, Y ), we estimated the mutual information with
-the proposed optimum bivariate discretization as well as the Maximal
-Information Coefficient (Reshef et al. 2011) using the `minepy` package.
-We counted the number of bins on each dimension for the optimal
-discretization found by both methods.
+directly as ![RI(X; Y ) = - log(1 - \\rho^2
+)/2](https://latex.codecogs.com/png.latex?RI%28X%3B%20Y%20%29%20%3D%20-%20log%281%20-%20%5Crho%5E2%20%29%2F2
+"RI(X; Y ) = - log(1 - \\rho^2 )/2") (Cover and Thomas 2012). For each
+pair (X, Y ), we estimated the mutual information with the proposed
+optimum bivariate discretization as well as the Maximal Information
+Coefficient (Reshef et al. 2011) using the `minepy` package. We counted
+the number of bins on each dimension for the optimal discretization
+found by both methods.
 
 To run this script you will need a working python installation with the
 [minepy package](https://minepy.readthedocs.io/en/latest/) (Albanese et
@@ -164,16 +166,25 @@ The partition chosen to estimate the Maximal Information Coefficient
 strength, as it systematically corresponds to an unbalanced distribution
 of bins between the two variables, with one variable usually partitioned
 into the maximum number of bins (set by default to
-\(\text{floor}(N^{0.6} /2) = 31\)) while the other is discretized into
+![\\text{floor}(N^{0.6}/2)
+= 31](https://latex.codecogs.com/png.latex?%5Ctext%7Bfloor%7D%28N%5E%7B0.6%7D%2F2%29%20%3D%2031
+"\\text{floor}(N^{0.6}/2) = 31")) while the other is discretized into
 two levels only. This result is not unexpected, however, as the Maximal
 Information Coefficient is defined by maximizing the mutual information
-of the discretized variables over the grid, \(I([X]_{∆x} ; [Y]_{∆y})\),
-normalized by the minimum of \(\text{log} ∆_x\) and \(\text{log} ∆_y\).
-Indeed, maximizing the normalized mutual information is done by
-partitioning as few samples as possible into the maximum number of bins
-in one dimension (as sketched in Fig. 1), while simultaneously
-minimizing the number of bins, and thus \(\text{log}∆_i\) , in the other
-dimension. See further discussion in (Kinney and Atwal 2014).
+of the discretized variables over the grid,
+![I(\[X\]\_{\\Delta\_x};\[Y\]\_{\\Delta\_y})](https://latex.codecogs.com/png.latex?I%28%5BX%5D_%7B%5CDelta_x%7D%3B%5BY%5D_%7B%5CDelta_y%7D%29
+"I([X]_{\\Delta_x};[Y]_{\\Delta_y})"), normalized by the minimum of
+![\\text{log}
+\\Delta\_x](https://latex.codecogs.com/png.latex?%5Ctext%7Blog%7D%20%5CDelta_x
+"\\text{log} \\Delta_x") and ![\\text{log}
+\\Delta\_y](https://latex.codecogs.com/png.latex?%5Ctext%7Blog%7D%20%5CDelta_y
+"\\text{log} \\Delta_y"). Indeed, maximizing the normalized mutual
+information is done by partitioning as few samples as possible into the
+maximum number of bins in one dimension (as sketched in Fig. 1), while
+simultaneously minimizing the number of bins, and thus
+![\\text{log}\\Delta\_i](https://latex.codecogs.com/png.latex?%5Ctext%7Blog%7D%5CDelta_i
+"\\text{log}\\Delta_i") , in the other dimension. See further discussion
+in (Kinney and Atwal 2014).
 
 # References
 
