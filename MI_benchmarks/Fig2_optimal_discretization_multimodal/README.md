@@ -54,12 +54,12 @@ for(N in c(500,1000,10000)){
 
 ![](Fig2_files/figure-gfm/plot-1.png)<!-- -->
 
-    ## [1] 0.98682
+    ## [1] 1.01338
 
 ![](Fig2_files/figure-gfm/plot-2.png)<!-- -->
 
-    ## [1] 1.10994
+    ## [1] 1.09319
 
 ![](Fig2_files/figure-gfm/plot-3.png)<!-- -->
 
-    ## [1] 1.14539
+    ## [1] 1.14827

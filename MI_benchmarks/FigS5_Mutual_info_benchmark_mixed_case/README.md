@@ -138,13 +138,6 @@ for(N in seq(100,3100, by=500)){
 example = miic::discretizeMutual(X,Y)
 ```
 
-    ## 
-    ## Attaching package: 'gridExtra'
-
-    ## The following object is masked from 'package:dplyr':
-    ## 
-    ##     combine
-
 ![](FigS5_files/figure-gfm/model%201-1.png)<!-- -->
 
 ``` r

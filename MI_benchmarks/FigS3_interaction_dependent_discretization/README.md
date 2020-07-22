@@ -50,7 +50,7 @@ miic::discretizeMutual(X, Y1)$infok
 
 ![](FigS3_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
-    ## [1] 0.61778
+    ## [1] 0.66321
 
 ``` r
 Y2 = X**5 + noise/1900
@@ -59,4 +59,4 @@ miic::discretizeMutual(X, Y2)$infok
 
 ![](FigS3_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
 
-    ## [1] 0.61469
+    ## [1] 0.68592
