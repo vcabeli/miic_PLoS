@@ -9,11 +9,11 @@ sharing the same sampling of ![X](https://latex.codecogs.com/png.latex?X
 "X") taken from a uniform distribution on
 ![\[0, 0.3\]](https://latex.codecogs.com/png.latex?%5B0%2C%200.3%5D
 "[0, 0.3]"), but with different dependences for
-![Y](https://latex.codecogs.com/png.latex?Y "Y"). {}
+![Y](https://latex.codecogs.com/png.latex?Y "Y"). (A)
 ![Y](https://latex.codecogs.com/png.latex?Y "Y") is defined as
 ![\\log(X) +
 \\epsilon\_1](https://latex.codecogs.com/png.latex?%5Clog%28X%29%20%2B%20%5Cepsilon_1
-"\\log(X) + \\epsilon_1"), and {}
+"\\log(X) + \\epsilon_1"), and (B)
 ![Y](https://latex.codecogs.com/png.latex?Y "Y") is defined as ![X^5 +
 \\epsilon\_2](https://latex.codecogs.com/png.latex?X%5E5%20%2B%20%5Cepsilon_2
 "X^5 + \\epsilon_2"), where
@@ -28,11 +28,11 @@ informations of both examples are comparable,
 This example shows that the optimum partition for
 ![X](https://latex.codecogs.com/png.latex?X "X") depends on its specific
 relation with ![Y](https://latex.codecogs.com/png.latex?Y "Y") and needs
-to be discretized with finer partitions in {} at low
+to be discretized with finer partitions in (A) at low
 ![X](https://latex.codecogs.com/png.latex?X "X") values for which
 ![Y\\simeq \\log
 X](https://latex.codecogs.com/png.latex?Y%5Csimeq%20%5Clog%20X
-"Y\\simeq \\log X") varies the most and in {} at higher
+"Y\\simeq \\log X") varies the most and in (B) at higher
 ![X](https://latex.codecogs.com/png.latex?X "X") values for ![Y\\simeq
 X^5](https://latex.codecogs.com/png.latex?Y%5Csimeq%20X%5E5
 "Y\\simeq X^5").
@@ -50,7 +50,7 @@ miic::discretizeMutual(X, Y1)$infok
 
 ![](FigS3_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
-    ## [1] 0.63026
+    ## [1] 0.61778
 
 ``` r
 Y2 = X**5 + noise/1900
@@ -59,4 +59,4 @@ miic::discretizeMutual(X, Y2)$infok
 
 ![](FigS3_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
 
-    ## [1] 0.66306
+    ## [1] 0.61469

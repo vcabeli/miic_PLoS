@@ -12,9 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Optimum bivariate partitions obtained from $N=1,000$ samples of two different joint distributions $P(X,Y)$ sharing the same sampling of $X$ taken from a uniform distribution on $[0, 0.3]$, but with different dependences for $Y$.
-{\bfseries (A)} $Y$ is defined as $\log(X) + \epsilon_1$, and {\bfseries (B)} $Y$ is defined as $X^5 + \epsilon_2$, where $\epsilon_1$ and $\epsilon_2$ are Gaussian noise terms chosen so that the mutual informations of both examples are comparable, {\color{black}$I(X;Y)\simeq 0.75$}.
+(A) $Y$ is defined as $\log(X) + \epsilon_1$, and (B) $Y$ is defined as $X^5 + \epsilon_2$, where $\epsilon_1$ and $\epsilon_2$ are Gaussian noise terms chosen so that the mutual informations of both examples are comparable, {\color{black}$I(X;Y)\simeq 0.75$}.
 
-This example shows that the optimum partition for $X$ depends on its specific relation with $Y$ and needs to be discretized with finer partitions in {\bfseries (A)} at low $X$ values for which $Y\simeq \log X$ varies the most and in {\bfseries (B)} at higher $X$ values for $Y\simeq X^5$.
+This example shows that the optimum partition for $X$ depends on its specific relation with $Y$ and needs to be discretized with finer partitions in (A) at low $X$ values for which $Y\simeq \log X$ varies the most and in (B) at higher $X$ values for $Y\simeq X^5$.
 
 
 ```{r, fig.height=6, fig.width=6}
