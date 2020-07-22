@@ -23,7 +23,8 @@ mv.NE <- mvdc(gumbelCopula(5), margins=c("mixnorm1","mixnorm2"), paramMargins=li
 
 
 ## ----plot, fig.width = 6, fig.height = 6---------------------------------
-N = 500
-data = rMvdc(N, mv.NE)
-print(discretizeMutual(data[,1], data[,2])$info)
+for(N in c(500,1000,10000)){
+  data = rMvdc(N, mv.NE)
+  print(discretizeMutual(data[,1], data[,2])$info)
+}
 

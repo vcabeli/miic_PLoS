@@ -46,11 +46,20 @@ mv.NE <- mvdc(gumbelCopula(5), margins=c("mixnorm1","mixnorm2"), paramMargins=li
 Generating samples and running the dynamic discretization :
 
 ``` r
-N = 500
-data = rMvdc(N, mv.NE)
-print(discretizeMutual(data[,1], data[,2])$info)
+for(N in c(500,1000,10000)){
+  data = rMvdc(N, mv.NE)
+  print(discretizeMutual(data[,1], data[,2])$info)
+}
 ```
 
 ![](Fig2_files/figure-gfm/plot-1.png)<!-- -->
 
-    ## [1] 1.19598
+    ## [1] 0.98682
+
+![](Fig2_files/figure-gfm/plot-2.png)<!-- -->
+
+    ## [1] 1.10994
+
+![](Fig2_files/figure-gfm/plot-3.png)<!-- -->
+
+    ## [1] 1.14539
