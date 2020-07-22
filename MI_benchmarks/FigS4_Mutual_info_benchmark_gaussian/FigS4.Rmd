@@ -135,6 +135,6 @@ plot(variance)
 ```
 
 
-We note a particularly desirable property of the miic estimation : its error and variance tend to zero as the signal disappears ($\rho \rightarrow 0$) as the complexity cost is greater than any information coming from the 2d discretization of the data. This results in few false positives when doing the graph reconstruction while still decent power.
+We note a particularly desirable property of the miic estimation : its error and variance tend to zero as the signal disappears ($\rho \rightarrow 0$) as the complexity cost is greater than any information coming from the 2d discretization of the data. This results in few false positives when doing the graph reconstruction while still having decent power.
 
 # References

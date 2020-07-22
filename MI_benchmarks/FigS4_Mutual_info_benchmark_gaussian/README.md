@@ -217,7 +217,7 @@ error and variance tend to zero as the signal disappears (![\\rho
 "\\rho \\rightarrow 0")) as the complexity cost is greater than any
 information coming from the 2d discretization of the data. This results
 in few false positives when doing the graph reconstruction while still
-decent power.
+having decent power.
 
 # References
 
