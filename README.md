@@ -12,7 +12,7 @@ https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007866
 You need the package `miic` and its dependencies to run the code.
 Use the package installer directly in R for the latest stable CRAN version
 ```R
-install.packages("miic")
+install.packages("miic", dep = T)
 ```
 
 or install the package from the tarball (https://github.com/miicTeam/miic_R_package) using the console command line:
