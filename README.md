@@ -1,7 +1,5 @@
 # Learning clinical networks from medical records based on information estimates in mixed-type data
 
-##**work in progress**
-
 This is the repository containing the code and figures for the 2020 paper published in PLoS 
 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007866
 
@@ -21,8 +19,6 @@ git clone https://github.com/miicTeam/miic_R_package.git
 cd miic_R_package
 R CMD INSTALL .
 ```
-
-## Organization
 
 
 ## License
