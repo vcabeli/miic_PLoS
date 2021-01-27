@@ -16,6 +16,13 @@ library(reticulate)
 # Mixed KSG from Gao et al. 2017
 source_python("~/work/projects/miic_dyn_programming_MI/mixed_KSG/mixed.py")
 ################################################################################
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(MASS)
+library(infotheo)
+library(miic)
+```
 ```
 
 We will use `rJava` to use the JIDT toolbox (Lizier 2014)
