@@ -23,7 +23,6 @@ library(MASS)
 library(infotheo)
 library(miic)
 ```
-```
 
 We will use `rJava` to use the JIDT toolbox (Lizier 2014)
 (<https://github.com/jlizier/jidt>) for other KSG estimators, namely the
