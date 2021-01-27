@@ -1,5 +1,5 @@
 ---
-title: "FigS2 Adaptive information-maximizing partitions depending on interaction strength"
+title: "FigS4 Mutual information estimation for Gaussian bivariate distributions"
 output:
   github_document:
     pandoc_args: --webtex
