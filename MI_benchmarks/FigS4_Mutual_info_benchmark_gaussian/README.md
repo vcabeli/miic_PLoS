@@ -1,5 +1,4 @@
-FigS2 Adaptive information-maximizing partitions depending on
-interaction strength
+FigS4 Mutual information estimation for Gaussian bivariate distributions
 ================
 
 This script aims to benchmark the miic mutual information estimation for
